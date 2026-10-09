@@ -2,6 +2,10 @@
 
 Личный мобильный планировщик путешествий. Интерфейс на английском; поездки, документы и расходы хранятся только в браузере на устройстве. Основное устройство — iPhone.
 
+Адрес приложения: [открыть Travel Planner](https://lesyakudashova-creator.github.io/travelapp/).
+
+Репозиторий: [lesyakudashova-creator/travelapp](https://github.com/lesyakudashova-creator/travelapp). Сайт и код публичные; сохранённые пользователем поездки и вложения в репозиторий не отправляются. Данные локального preview на компьютере не переносятся автоматически на этот адрес или на телефон.
+
 ## Возможности
 
 - Поездки с обложками, городами и повторными периодами пребывания.
@@ -40,7 +44,7 @@ npm run preview
 
 ```sh
 git init -b main
-git add .
+git add .github .gitignore README.md VERIFICATION.md e2e index.html package.json package-lock.json playwright.config.ts public src tests tsconfig.json vite.config.ts vitest.config.ts
 git commit -m "Build Travel Planner PWA"
 git remote add origin https://github.com/YOUR-USERNAME/travelapp.git
 git push -u origin main
@@ -86,4 +90,4 @@ Workflow сначала выполняет проверки, затем публ
 - `src/forms.tsx`, `src/ui.tsx`, `src/styles.css` — формы и общая дизайн-система.
 - `tests/`, `e2e/` — проверки бизнес-логики и браузерных сценариев.
 
-Схема IndexedDB начинается с версии 1. Изменения схемы оформляйте новой версией Dexie и сохраняющей данные миграцией. Не используйте удаление базы как способ обновления. Контекст продукта и правила развития — в `Product.md` и `AGENTS.md`.
+Схема IndexedDB начинается с версии 1. Изменения схемы оформляйте новой версией Dexie и сохраняющей данные миграцией. Не используйте удаление базы как способ обновления. Контекст продукта и правила развития — в локальных `Product.md` и `AGENTS.md`; исходные материалы планирования не публикуются в этом репозитории.
