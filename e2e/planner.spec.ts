@@ -155,6 +155,8 @@ test("complete local journey, linked budget, documents and offline restart", asy
   await page.getByRole("button", { name: "Edit hotel" }).click();
   await page.getByLabel("Notes · Optional").fill("Saved offline");
   await page.getByRole("button", { name: "Save hotel" }).click();
+  await expect(page.getByRole("button", { name: "Edit hotel" })).toBeVisible();
+  await expect(page.getByText("Saved offline", { exact: true })).toBeVisible();
   await page.reload();
   await expect(page.getByText("Saved offline", { exact: true })).toBeVisible();
   await context.setOffline(false);

@@ -71,6 +71,7 @@ test("accepting a new service worker preserves bookings and document blobs", asy
       buffer: Buffer.from("%PDF-1.4 persistent document"),
     });
     await page.getByRole("button", { name: "Save hotel" }).click();
+    await expect(page.getByRole("button", { name: "Edit hotel" })).toBeVisible();
     await expect(page.getByText("keep.pdf", { exact: true })).toBeVisible();
     await page.evaluate(async () => {
       await navigator.serviceWorker.ready;
